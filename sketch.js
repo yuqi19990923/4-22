@@ -1,23 +1,26 @@
 let x;
-// let y;
+let y;
 
 function setup() {
-   createCanvas(1800, 1000);
-    x=0
-    y=0
+   createCanvas(500, 500);
+   x=200
+   y=200
     }
 function draw() {
-    background(220);
-    x=x+20;
+    background(200,0,0,10);
+    x=x+10
+    y=y+10
+    if(y>height){
+      y=0
+    }
     if(x>width){
-       x=0;
+      x=0
     }
-
-
-    //  y=y+1;
-    circle(x,y,50);
-    textSize(200,200);
-    textAlign(CENTER,CENTER);
-    text("川﨑瑞生",width/2,height/2);
-
+    fill(255,255,random(255));
+    noStroke();
+    for(let i=0; i<7; i++) {
+       circle(i*100,i*100,random(50));
     }
+      
+
+}
